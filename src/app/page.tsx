@@ -1,6 +1,7 @@
 import Content from "@/app/Components/Content";
 import Expert from "@/app/Components/Expert";
 import Feature from "@/app/Components/Feature";
+import Footer from "@/app/Components/Footer";
 import Header from "@/app/Components/Header";
 import Hero from "@/app/Components/Hero";
 import Letter from "@/app/Components/Letter";
@@ -16,6 +17,7 @@ export default function Home() {
       <Expert />
       <Special />
       <Letter />
+      <Footer />
     </div>
   );
 }

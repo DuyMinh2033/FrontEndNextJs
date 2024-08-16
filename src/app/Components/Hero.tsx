@@ -5,7 +5,7 @@ import { Fade } from "react-awesome-reveal";
 import { FaArrowRight } from "react-icons/fa";
 const Hero = () => {
   return (
-    <div className="bg-[radial-gradient(ellipse_200%_100%_at_bottom_left,#183EC2,#EAEEFE_100%)] py-10">
+    <div className="bg-[radial-gradient(ellipse_200%_100%_at_bottom_left,#183EC2,#EAEEFE_100%)] py-10 mt-[60px]">
       <div className="max-w-[1200px] mx-auto">
         <div className="w-full grid grid-cols-1 gap-7 md:grid-cols-2 px-4 xl:px-0">
           <div className="flex flex-col justify-center">
