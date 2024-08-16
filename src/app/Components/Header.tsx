@@ -8,9 +8,30 @@ import { SiNextdotjs } from "react-icons/si";
 
 const Header = () => {
   const [openDrawer, setOpenDrawer] = useState(false);
+
+  const scrollToContent = () => {
+    const content = document.getElementById("content");
+    if (content) {
+      content.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const scrollToFeature = () => {
+    const feature = document.getElementById("feature");
+    if (feature) {
+      feature.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const scrollToLetter = () => {
+    const letter = document.getElementById("letter");
+    if (letter) {
+      letter.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
-    <div className="">
-      <div className="h-[60px] sticky">
+    <div className="fixed top-0 left-0 w-full bg-white z-50 shadow-md">
+      <div className="h-[60px]">
         <div className="max-w-[1200px] mx-auto h-full">
           <div className="h-full flex items-center px-4 xl:px-0 md:justify-between">
             <div className="flex items-center h-full gap-2">
@@ -23,34 +44,31 @@ const Header = () => {
             </div>
             <IoMdMenu
               size={28}
-              className="mt-[2px]  md:hidden cursor-pointer"
+              className="mt-[2px] md:hidden cursor-pointer"
               onClick={() => setOpenDrawer((prev) => !prev)}
             />
             <div className="hidden md:flex items-center gap-4">
-              <Link
-                href={"/"}
-                className="hover:border-b-2 hover:border-yellow-500 hover:transition-all duration-200 text-lg"
+              <div
+                className="hover:border-b-2 cursor-pointer hover:border-yellow-500 hover:transition-all duration-200 text-lg"
+                onClick={() => scrollToFeature()}
               >
                 About
-              </Link>
-              <Link
-                href={"/"}
-                className="hover:border-b-2 hover:border-yellow-500 hover:transition-all duration-200 text-lg"
+              </div>
+              <div
+                onClick={() => scrollToLetter()}
+                className="hover:border-b-2 cursor-pointer hover:border-yellow-500 hover:transition-all duration-200 text-lg"
               >
                 Contact
-              </Link>
-              <Link
-                href={"/"}
-                className="hover:border-b-2 hover:border-yellow-500 hover:transition-all duration-200 text-lg"
+              </div>
+              <div
+                className="hover:border-b-2 cursor-pointer hover:border-yellow-500 hover:transition-all duration-200 text-lg"
+                onClick={() => scrollToContent()}
               >
                 Learn more
-              </Link>
-              <Link
-                href={"/"}
-                className="px-4 py-2 rounded-md bg-black font-medium text-white hover:opacity-60 hover:transition-opacity hover:duration-500"
-              >
+              </div>
+              <div className=" cursor-pointer px-4 py-2 rounded-md bg-black font-medium text-white hover:opacity-60 hover:transition-opacity hover:duration-500">
                 Login
-              </Link>
+              </div>
             </div>
           </div>
         </div>
