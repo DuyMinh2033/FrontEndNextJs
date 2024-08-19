@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 import React from "react";
 import { Fade } from "react-awesome-reveal";
@@ -53,12 +54,12 @@ const Letter = () => {
           cascade
           damping={1e-1}
           triggerOnce={true}
-          className="absolute right-[-400px] top-[-300px] hidden md:block"
+          className="absolute right-[-150px] top-[-150px] hidden md:block"
         >
           <img
             src="img/anh1.png"
             alt="aaa"
-            className="h-[600px] object-center"
+            className="h-[300px] object-center"
           />
         </Fade>
       </div>
